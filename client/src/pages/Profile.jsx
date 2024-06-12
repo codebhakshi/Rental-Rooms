@@ -14,8 +14,6 @@ import {
   deleteUserFailure,
   deleteUserStart,
   deleteUserSuccess,
-  // signOutUserFailure,
-  // signOutUserSuccess,
   signOutUserStart,
 } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
@@ -235,9 +233,7 @@ export default function Profile() {
         >
           Delete account
         </span>
-        <span 
-        onClick={handleSignOut} 
-        className='text-red-700 cursor-pointer'>
+        <span onClick={handleSignOut} className='text-red-700 cursor-pointer'>
           Sign out
         </span>
       </div>
@@ -246,9 +242,7 @@ export default function Profile() {
       <p className='text-green-700 mt-5'>
         {updateSuccess ? 'User is updated successfully!' : ''}
       </p>
-      <button 
-      onClick={handleShowListings} 
-      className='text-green-700 w-full'>
+      <button onClick={handleShowListings} className='text-green-700 w-full'>
         Show Listings
       </button>
       <p className='text-red-700 mt-5'>
