@@ -95,7 +95,7 @@ export default function Home() {
               <h2 className='text-2xl font-semibold text-slate-600'>Recent offers</h2>
               <Link className='text-sm text-blue-800 hover:underline' to={'/search?offer=true'}>Show more offers</Link>
             </div>
-            <div className='flex flex-wrap gap-8 ml-[70px]'>
+            <div className='flex flex-wrap gap-8 sm:ml-[80px]'>
               {offerListings.map((listing) => (
                 <ListingItem listing={listing} key={listing._id} />
               ))}
@@ -108,7 +108,7 @@ export default function Home() {
               <h2 className='text-2xl font-semibold text-slate-600'>Recent places for rent</h2>
               <Link className='text-sm text-blue-800 hover:underline' to={'/search?type=rent'}>Show more places for rent</Link>
             </div>
-            <div className='flex flex-wrap gap-8 ml-[70px]'>
+            <div className='flex flex-wrap gap-8 sm:ml-[80px]'>
               {rentListings.map((listing) => (
                 <ListingItem listing={listing} key={listing._id} />
               ))}
@@ -121,7 +121,7 @@ export default function Home() {
               <h2 className='text-2xl font-semibold text-slate-600'>Recent places for sale</h2>
               <Link className='text-sm text-blue-800 hover:underline' to={'/search?type=sale'}>Show more places for sale</Link>
             </div>
-            <div className='flex flex-wrap gap-8 ml-[70px] '>
+            <div className='flex flex-wrap gap-8 sm:ml-[80px]'>
               {saleListings.map((listing) => (
                 <ListingItem listing={listing} key={listing._id} />
               ))}
