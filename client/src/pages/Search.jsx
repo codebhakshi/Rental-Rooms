@@ -243,13 +243,12 @@ export default function Search() {
             </p>
           )}
 
-          < div className = 'flex flex-wrap gap-3 justify-center' >
           {!loading &&
             listings &&
             listings.map((listing) => (
-              <ListingItem key={listing._id} listing={listing} />
+              <ListingItem key={listing._id} listing={listing}  />
             ))}
-          </div>
+          
           
 
           {showMore && (
