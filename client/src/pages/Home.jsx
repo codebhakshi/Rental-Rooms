@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
-        const res = await fetch('/api/listing/get?offer=true&limit=4');
+        const res = await fetch('/api/listing/get?offer=true&limit=6');
         const data = await res.json();
         setOfferListings(data);
         fetchRentListings();
@@ -25,7 +25,7 @@ export default function Home() {
     };
     const fetchRentListings = async () => {
       try {
-        const res = await fetch('/api/listing/get?type=rent&limit=4');
+        const res = await fetch('/api/listing/get?type=rent&limit=6');
         const data = await res.json();
         setRentListings(data);
         fetchSaleListings();
@@ -36,7 +36,7 @@ export default function Home() {
 
     const fetchSaleListings = async () => {
       try {
-        const res = await fetch('/api/listing/get?type=sale&limit=4');
+        const res = await fetch('/api/listing/get?type=sale&limit=6');
         const data = await res.json();
         setSaleListings(data);
       } catch (error) {
@@ -46,7 +46,7 @@ export default function Home() {
     fetchOfferListings();
   }, []);
   return (
-    <div>
+    <div >
       {/* top */}
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto'>
         <h1 className='text-slate-700 font-bold text-3xl lg:text-6xl'>
@@ -55,7 +55,7 @@ export default function Home() {
           place with ease
         </h1>
         <div className='text-gray-400 text-xs sm:text-sm'>
-          Birla To-Lets is the best place to find your next perfect place to
+          Sahand Estate is the best place to find your next perfect place to
           live.
           <br />
           We have a wide range of properties for you to choose from.
